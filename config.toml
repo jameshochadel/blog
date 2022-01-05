@@ -1,4 +1,4 @@
 baseURL = 'http://hochadel.blog/'
 languageCode = 'en-us'
 title = 'James Hochadel'
-theme = "ananke"
+theme = "etch"

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="http://hochadel.blog/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>Writing Go with Sublime Text</title>
+</head>
+<body><header id="banner">
+    <h2><a href="http://hochadel.blog/">James Hochadel</a></h2>
+    <nav>
+        <ul>
+            
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Writing Go with Sublime Text</h1>
+            <div>
+                <time>January 3, 2022</time>
+                </div>
+    </header><p>I mostly write software in Go, and I write Go in Sublime Text on macOS. GoLand and VSCode are more common choices for Go development. These are my thoughts on Sublime and why I think it&rsquo;s a good match for Go.</p>
+<h1 id="why-sublime">Why Sublime?</h1>
+<p>Sublime has been my editor of choice for about ten years. There are a few standout features, but the best one is the most basic: It&rsquo;s fast. The feeling of speed is informed by its performance and by its ergonomics.</p>
+<p>In terms of performance, Sublime starts nearly instantly, switches projects with no delay, and scrolls files smoothly, an underrated and surprisingly rare feature in editors. Sublime&rsquo;s ergonomics are also excellent, in my opinion. Sublime is an unapologetically visual editor that makes good use of the mouse, having pioneered features like multiple selection (or at least made them mainstream). But it also lets you maintain flow from the keyboard with features like the Command Palette and Goto Anything, both of which support fuzzy matching. Goto Symbol in particular is tremendously valuable when exploring unfamiliar codebases, or jumping around quickly in familiar ones.</p>
+<p>Lastly, Sublime&rsquo;s UI elements are very responsive. Despite using a custom UI library, the UI has always felt uniquely native to me. There are certainly some odd non-native paradigms to get used to. Preferences, for instances, are not configured via a UI, but are made available as a JSON file and modified right in the editor.</p>
+<p>The upshot of all this quickness is that Sublime lets me work very close to the speed of thought.</p>
+<p>Besides its speed, I find ST a good match for Go because it complements, rather than replaces, the CLI and CLI-based tools. <code>go</code> ships with excellent tools for formatting, profiling, and testing your code. Sublime integrates with many of them via the Build Systems feature, but I typically invoke them from the CLI. There&rsquo;s a minimal amount of IDE magic involved either way. Sublime does lack some clever features that GoLand includes, and while it is multiplatform, it has no web version or iPad version.</p>
+<p>The last feature I like about Sublime is that I have a very clear relationship with the company that sells it. I pay Sublime HQ $99 USD, in return I got a license key and three years of updates. If I want to continue receiving updates in three years, I&rsquo;ll pay them again. Visual Studio Code is free, but Microsoft must believe that&rsquo;s to its benefit. Perhaps they get developer mindshare, or a common platform on which to build products like GitHub Codespaces and Copilot. Those things aren&rsquo;t bad, but the murkiness puts me off.</p>
+<p>I&rsquo;m glad that excellent free editors like VSCode exist; &lsquo;free&rsquo; lowers the barrier to entry for new programmers, and that&rsquo;s a good thing. But once I started getting paid to code, I decided to start paying for a few tools that helped me improve my craft, and I haven&rsquo;t regretted it since.</p>
+<p>Sublime feels like it is a good match for Go. The <a href="https://go.dev">go.dev</a> website promises you can &ldquo;build fast, reliable, and efficient software at scale&rdquo; using Go, and the language accomplishes this in part by being deliberately simple and reliable itself.</p>
+<h1 id="my-setup">My Setup</h1>
+<p>Basics are Go and Sublime, as well as Package Control, the Sublime package manager. It&rsquo;s not installed by default, but can be installed from inside the app. I&rsquo;m on the dev channel; not easy to find.</p>
+<p>The key is Sublime LSP and <code>gopls</code>.</p>
+<ul>
+<li>Install <code>gopls</code>, the LSP-compatible Language Server for go. Instructions <a href="https://go.googlesource.com/tools/+/refs/heads/master/gopls/README.md">here</a>, or simply run:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go install golang.org/x/tools/gopls@latest
+</code></pre></div><p>LSP-gopls connects the two.</p>
+<p>Other plugins:</p>
+<ul>
+<li>Golang Build</li>
+<li>gomod</li>
+<li>SidebarEnhancements</li>
+</ul>
+<p>Settings:</p>
+<ul>
+<li>
+<p>Go</p>
+</li>
+<li>
+<p>Sublime plugins</p>
+<ul>
+<li>SublimeLSP</li>
+</ul>
+</li>
+<li>
+<p>Sublime settings?</p>
+<ul>
+<li>Also LSP settings, like format on save</li>
+</ul>
+</li>
+<li>
+<p>Possibly get on the dev channel, discord</p>
+</li>
+</ul>
+<h1 id="using-sublime">Using Sublime</h1>
+<ul>
+<li>Most helpful shortcuts
+<ul>
+<li>Project &gt; Save As</li>
+<li>Mapping cmd+shift+o to &ldquo;Switch Project&rdquo;, like &ldquo;Switch Repo&rdquo; in Merge</li>
+<li>Sublime has a built-in spell check! Cmd+shift+? to get MacOS menu search &gt; &ldquo;Spell Check&rdquo;</li>
+<li><code>cmd+,</code> to edit settings
+<ul>
+<li>Approach to settings: Everything you can adjust is on the left. Look through it like you&rsquo;d look through a normal settings page. When you find something you want to change, add an entry on the right.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Build system
+<ul>
+<li>Still exploring</li>
+<li>Hugo though, custom build system for this!</li>
+</ul>
+</li>
+</ul>
+<h1 id="bugs-pitfalls-and-shortcomings">Bugs, Pitfalls, and Shortcomings</h1>
+<ul>
+<li>Sublime
+<ul>
+<li>Fullscreen with MacOS and native tabs buggy for years</li>
+<li>Sidebar, no drag &amp; drop</li>
+<li>$PATH</li>
+</ul>
+</li>
+<li>LSP
+<ul>
+<li>Have to restart after running go generate, doesn’t pick up changes automatically</li>
+<li>Autocomplete menu disappearing after doing X</li>
+<li>Top autocomplete option changing after typing out exact how it starts</li>
+<li>Enter sometimes fills autocomplete, sometimes inserts a newline</li>
+<li>Weird formatting behavior when structs are missing a comma somewhere</li>
+<li>Can&rsquo;t complain, it&rsquo;s free!</li>
+</ul>
+</li>
+</ul>
+</article>
+
+        </main><footer id="footer">
+    
+</footer>
+</body>
+</html>

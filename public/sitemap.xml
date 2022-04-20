@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://hochadel.blog/categories/</loc>
+    <loc>http://hochadel.blog/posts/</loc>
+    <lastmod>2022-04-20T12:39:29-04:00</lastmod>
   </url><url>
     <loc>http://hochadel.blog/</loc>
+    <lastmod>2022-04-20T12:39:29-04:00</lastmod>
+  </url><url>
+    <loc>http://hochadel.blog/posts/lists-and-habits/</loc>
+    <lastmod>2022-04-20T12:39:29-04:00</lastmod>
+  </url><url>
+    <loc>http://hochadel.blog/about/</loc>
+  </url><url>
+    <loc>http://hochadel.blog/categories/</loc>
   </url><url>
     <loc>http://hochadel.blog/tags/</loc>
   </url>

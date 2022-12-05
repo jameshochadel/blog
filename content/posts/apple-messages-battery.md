@@ -1,7 +1,6 @@
 ---
 title: "Who is Draining my MacBook Battery?"
 date: 2022-12-04T20:58:28-05:00
-draft: true
 ---
 
 My M1 MacBook Air is an amazing computer. Its battery lasts 20 hours while browsing the web with Safari and programming with Sublime Text, or about 30 days asleep with the lid closed. Except today, it died after less than a day of sleep.

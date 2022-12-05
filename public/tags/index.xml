@@ -12,6 +12,46 @@
     
     
     <item>
+      <title>Who is Draining my MacBook Battery?</title>
+      <link>http://hochadel.blog/posts/apple-messages-battery/</link>
+      <pubDate>Sun, 04 Dec 2022 20:58:28 -0500</pubDate>
+      
+      <guid>http://hochadel.blog/posts/apple-messages-battery/</guid>
+      <description>&lt;p&gt;My M1 MacBook Air is an amazing computer. Its battery lasts 20 hours while browsing the web with Safari and programming with Sublime Text, or about 30 days asleep with the lid closed. Except today, it died after less than a day of sleep.&lt;/p&gt;
+&lt;p&gt;A rogue, poorly coded app with bad power management must have caused this. Which wayward app developer is to blame?&lt;/p&gt;
+&lt;p&gt;Answer: Apple.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/apple-messages-draining-battery/activity-monitor.png&#34; alt=&#34;Activity Monitor showing Apple Messages&#39; 12-hour power impact of 135. The most power-hungry app, Minecraft, has an impact of 291. Mail, an app comparable to Messages, has an impact of 4.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To be clear, Minecraft was closed while the machine was sleeping. Why is Messages using as much battery while my laptop is asleep as Minecraft did while it was awake?&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Printing on Envelopes</title>
+      <link>http://hochadel.blog/posts/printing-envelopes/</link>
+      <pubDate>Sun, 04 Dec 2022 20:21:31 -0500</pubDate>
+      
+      <guid>http://hochadel.blog/posts/printing-envelopes/</guid>
+      <description>&lt;p&gt;I needed to print addresses on 40 A7 envelopes today. It&amp;rsquo;s been a while since I printed on anything besides US Letter, and I&amp;rsquo;m unhappy to report that it&amp;rsquo;s no less ridiculous than it was 15 years ago.&lt;/p&gt;
+&lt;p&gt;Generating the 40 envelopes with mail merge was easy enough. The rest was not:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A7 envelopes, at 5.25&amp;quot; tall by 7.25&amp;quot; wide, are not a preconfigured paper size in macOS. I add a new page size with those proportions, but macOS paper settings expect paper to be taller than it is wide, so orienting my new paper size with &amp;ldquo;portrait&amp;rdquo; setting makes it wider than it is tall, and &amp;ldquo;landscape&amp;rdquo; makes it taller than it is wide. I reverse my initial inputs to correct this.&lt;/li&gt;
+&lt;li&gt;The printer tray has a diagram indicating that paper should be placed face-down, but there&amp;rsquo;s no indication of how to rotate paper that was fed in &amp;ldquo;landscape&amp;rdquo; like mine. With a 50/50 chance of getting it right, the test envelope came out 180º from the correct orientation. Modern macOS print dialogs show all sorts of printer-specific information inline. I wish they went a step further and prompted the user with guidance like, &amp;ldquo;feed paper face-down and with the top edge to the right&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Flipping the envelopes made the address print in the correct orientation, but inexplicably several inches off target. I try several permutations of different margins, page dimensions, portrait/landscape configurations. None print what I see in the print preview.&lt;/li&gt;
+&lt;li&gt;Reasoning that the printer can print on letter paper, and knowing where envelopes feed into the printer relative to a sheet of letter paper, I reformat the entire document to the dimensions of a letter page, with the addresses superimposed. I print one to test, and it works!&lt;/li&gt;
+&lt;li&gt;Victory, right? I print the rest. The first envelope in the batch prints wildly off target, mostly off the page, and then the printer stops due to a media error.&lt;/li&gt;
+&lt;li&gt;I resort to opening the print dialog 40 times in a row, printing one page at a time each time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Final step: Contemplate whether hand-addressing the envelopes would have been quicker.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Post script: I said that mail merge itself was easy, but I forgot that it actually was not. I tried doing the merge in Apple Pages, and per the Pages help website, there should have been a button under the Document tab in the sidebar to configure mail merge. The button was not there, and the help page gave no hints about how to make it appear. I ended up recreating the layout in Word.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Make Lists, Build Habits, Get Un-Stuck</title>
       <link>http://hochadel.blog/posts/lists-and-habits/</link>
       <pubDate>Wed, 20 Apr 2022 12:39:29 -0400</pubDate>

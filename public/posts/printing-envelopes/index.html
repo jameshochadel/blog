@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="http://hochadel.blog/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>Printing on Envelopes</title>
+</head>
+<body><header id="banner">
+    <h2><a href="http://hochadel.blog/">James Hochadel</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts/" title=""></a>
+            </li><li>
+                <a href="/about/" title="About">About</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Printing on Envelopes</h1>
+            <div>
+                <time>December 4, 2022</time>
+                </div>
+    </header><p>I needed to print addresses on 40 A7 envelopes today. It&rsquo;s been a while since I printed on anything besides US Letter, and I&rsquo;m unhappy to report that it&rsquo;s no less ridiculous than it was 15 years ago.</p>
+<p>Generating the 40 envelopes with mail merge was easy enough. The rest was not:</p>
+<ol>
+<li>A7 envelopes, at 5.25&quot; tall by 7.25&quot; wide, are not a preconfigured paper size in macOS. I add a new page size with those proportions, but macOS paper settings expect paper to be taller than it is wide, so orienting my new paper size with &ldquo;portrait&rdquo; setting makes it wider than it is tall, and &ldquo;landscape&rdquo; makes it taller than it is wide. I reverse my initial inputs to correct this.</li>
+<li>The printer tray has a diagram indicating that paper should be placed face-down, but there&rsquo;s no indication of how to rotate paper that was fed in &ldquo;landscape&rdquo; like mine. With a 50/50 chance of getting it right, the test envelope came out 180º from the correct orientation. Modern macOS print dialogs show all sorts of printer-specific information inline. I wish they went a step further and prompted the user with guidance like, &ldquo;feed paper face-down and with the top edge to the right&rdquo;.</li>
+<li>Flipping the envelopes made the address print in the correct orientation, but inexplicably several inches off target. I try several permutations of different margins, page dimensions, portrait/landscape configurations. None print what I see in the print preview.</li>
+<li>Reasoning that the printer can print on letter paper, and knowing where envelopes feed into the printer relative to a sheet of letter paper, I reformat the entire document to the dimensions of a letter page, with the addresses superimposed. I print one to test, and it works!</li>
+<li>Victory, right? I print the rest. The first envelope in the batch prints wildly off target, mostly off the page, and then the printer stops due to a media error.</li>
+<li>I resort to opening the print dialog 40 times in a row, printing one page at a time each time.</li>
+</ol>
+<p>Final step: Contemplate whether hand-addressing the envelopes would have been quicker.</p>
+<hr>
+<p>Post script: I said that mail merge itself was easy, but I forgot that it actually was not. I tried doing the merge in Apple Pages, and per the Pages help website, there should have been a button under the Document tab in the sidebar to configure mail merge. The button was not there, and the help page gave no hints about how to make it appear. I ended up recreating the layout in Word.</p>
+</article>
+
+        </main><footer id="footer">
+    
+</footer>
+</body>
+</html>

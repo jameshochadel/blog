@@ -12,6 +12,95 @@
     
     
     <item>
+      <title>The iOS 16 Books App</title>
+      <link>http://hochadel.blog/posts/ios-16-books/</link>
+      <pubDate>Mon, 26 Dec 2022 03:49:31 -0400</pubDate>
+      
+      <guid>http://hochadel.blog/posts/ios-16-books/</guid>
+      <description>&lt;p&gt;Apple’s Books app has featured roughly the same reading experience since it was released in 2010. The experience changed this September with the release of iOS 16. The interface was fully redesigned, and I suspect it was also rebuilt using Swift UI.&lt;/p&gt;
+&lt;p&gt;While the team surely had good intentions, the new interface is, in my opinion, bizarre. It is also ridden with so many bugs that books are frequently unreadable. I was so surprised by the collective changes that I have cataloged them here.&lt;/p&gt;
+&lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
+&lt;p&gt;Since iOS 7, Apple has designed apps to highlight content and de-emphasize UI controls. This is usually accomplished by hiding or shrinking UI elements until the user taps somewhere to reveal them. This was the case in the old Books app: only the content of the book was visible until you tapped the middle of the page, making several buttons appear.&lt;/p&gt;
+&lt;p&gt;In iOS 15 and before, when you open a book, the book is all you see:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/ipad-reading.png&#34; alt=&#34;iPad Books app showing a book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Tapping the screen anywhere revealed all available controls:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/ipad-tap.png&#34; alt=&#34;iPad Books app with controls revealed&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Not so in iOS 16. Now when you open a book, a close button and a mystery button are always visible, hovering over the text:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-floating-controls.png&#34; alt=&#34;iOS 16 Books app with buttons floating above content&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The mystery button is adorned with an icon I&amp;rsquo;ve never seen on iOS, so I don&amp;rsquo;t know what it does. It looks a bit like an upside-down DC flag.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/dc-flag.jpg&#34; alt=&#34;The Washington, DC flag, with three red stars side-by-side, centered atop two horizontal red bars on a white background.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve clicked a link to jump elsewhere in the book, another button with an arrow and a page number appears. Tapping it jumps back to your previous position in the book. Tapping anywhere else on the page reveals more UI elements with information like the current page number, but they are not interactive.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-pages-left.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Animation typically has a purpose on iOS, but the new Books app isn&amp;rsquo;t typical. The floating controls will animate around when you tap, even if they&amp;rsquo;re not in the way of anything. It&amp;rsquo;s a totally useless animation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-animation.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In iOS 15 and before, the interface had buttons for viewing the table of contents, setting the theme, and searching the book. Where have they gone?&lt;/p&gt;
+&lt;p&gt;To reveal the rest of the controls, tap the DC flag button. You&amp;rsquo;ll find that difficult because the button is very small. On my iPhone 13 Pro, it is only 84 pixels to a side. At the 3x scale of a Super Retina display, that is 28 points, which is substantially smaller than &lt;a href=&#34;https://developer.apple.com/design/human-interface-guidelines/foundations/layout#best-practices&#34;&gt;Apple&amp;rsquo;s own recommendation of 44 points&lt;/a&gt; for touch targets. The contrast between their content (text and icons) and background is also very poor.&lt;/p&gt;
+&lt;p&gt;In attempting to touch this button, or even simply scroll through your book, you will likely make this symbol appear on accident:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-bookmark.png&#34; alt=&#34;A large red bookmark symbol in front of the text of an e-book.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The new interface is extremely sensitive to double-tapping, which now bookmarks the current page. My books are littered with bookmarks I&amp;rsquo;ve added on accident while scrolling.&lt;/p&gt;
+&lt;p&gt;When you marshal your fine motor skills and tap the tiny button, some labeled controls are revealed:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-control-panel.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The button labels are the sole part of the redesign I consider an improvement. I know many people, especially older folks, who are afraid of pressing random buttons on the computer. We in the tech industry take for granted that everyone knows what a search or bookmark icon looks like, but not everyone is so clued in to the conventions of modern software, and everyone must learn everything for the time at one point or another. For this reason, labeling buttons is a good accessibility practice.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the new control panel contains further oddities. Tapping the page used to reveal a scroll bar. Now you must open this overlay to scroll, and you&amp;rsquo;ll do it with a non-standard control (seen on the right-hand side). This control debuted in Control Center, where it is used to raise and lower the screen brightness and volume. In both cases, it &amp;ldquo;fills up&amp;rdquo; to represent adjusting the magnitude of something. That metaphor makes no sense for scrolling through a book. Moreover, the control is a poor choice because books are long! When the scroll bar was the height of the screen, you could scroll in more precise increments. Now a smaller area area represents the same span. This control is not used this way anywhere else in iOS.&lt;/p&gt;
+&lt;p&gt;On the topic of non-standard controls, the panel also shows an app-specific orientation lock, something no other first-party iOS app offers. To maximize confusion, it uses the same icon as the system orientation lock in Control Center, but appears to be unrelated; neither affects the other. Adding insult to injury, the icon is visually inconsistent; its stroke width is clearly a few pixels wider than the icons next to it.&lt;/p&gt;
+&lt;p&gt;Tapping &lt;strong&gt;Themes &amp;amp; Settings&lt;/strong&gt; shows options for customizing the appearance of the book. The old Books app already supported four colors, light &amp;amp; dark modes, and changing the typeface, and the new interface allows for even more.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-themes.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The layout on this page is even more confusing. The good practice of labeling mystery icons is forgotten; I recognize the light/dark mode toggle, but what is the icon beside it? Toggling it does not immediately reveal its purpose; it just causes the page to re-render. You have to tap it, close the panel, and swipe around to discover that it&amp;rsquo;s a toggle for infinite scroll vs paginated reading.&lt;/p&gt;
+&lt;p&gt;The dark mode button isn&amp;rsquo;t as simple as it seems either. The six boxes at the bottom appear to show five light themes and one dark theme, but tapping the button reveals that the app itself has light and dark &lt;em&gt;modes&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-dark-mode-toggle.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I could understand six themes, each with a light and a dark mode, but why confuse things by including one theme that&amp;rsquo;s always dark?&lt;/p&gt;
+&lt;p&gt;Moving on, above the scroll mode and dark mode buttons is a line of text: &lt;strong&gt;Original Options &amp;gt;&lt;/strong&gt; looks like a button, but what is Original? You have to look below: We&amp;rsquo;re using a theme called Original, and for some reason the theme name is run together with a textual button on this line. Never mind that labels should be near related controls; why is &lt;strong&gt;Original&lt;/strong&gt; here &lt;em&gt;at all&lt;/em&gt; when the selected theme is already clearly marked with a bold outline below?&lt;/p&gt;
+&lt;p&gt;It gets worse if you actually click on &lt;strong&gt;Options &amp;gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-design-original-options.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The header is &amp;ldquo;Original Options&amp;rdquo;! If you missed that you&amp;rsquo;re editing a theme called Original, you might think you&amp;rsquo;re editing a set of &lt;em&gt;default&lt;/em&gt; options. &amp;ldquo;Original&amp;rdquo; is a bad name for a theme, and this is bad typography.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s not the only poor choice on this page. The page is dedicated to customizing the theme, so it shows you buttons for changing the font, making the text bold, and&amp;hellip; customizing the theme even more, I guess. Why are there customization options behind a toggle on a page already dedicated to customization? And to highlight the first of many bugs, why does simply activating this toggle change the layout preview above?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-theme-customize.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Unluckily for the reader, these poor UX choices will be the least of their problems when trying to read their iBooks. That brings us to the bugs.&lt;/p&gt;
+&lt;h2 id=&#34;bugs&#34;&gt;Bugs&lt;/h2&gt;
+&lt;p&gt;I tried my best to document the bugs I encountered with a screenshot or video.&lt;/p&gt;
+&lt;h3 id=&#34;with-evidence&#34;&gt;With Evidence&lt;/h3&gt;
+&lt;p&gt;Scrolling at the end of a chapter can jump over text:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-scrolling.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Highlighting sometimes does not work:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-highlighting.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes the app renders nothing at all:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-empty.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Landscape mode sometimes does not reflow text from portrait:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-landscape.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Scrolling is jumpy: (best viewed at 60+ hertz)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-smooth-scroll.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The app may not respect system-wide dark mode, even when configured to do so:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-device-dark-mode.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes the scroll bar does not render to the side, but is instead merged with the Contents button:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-missing-scroll.mp4&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Tapping multiple links can spawn jump-forward and jump-back buttons that never go away, and crowd out other controls:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-navigation-crowding.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;without-evidence&#34;&gt;Without Evidence&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Changing the theme can lose your place in the book, jumping you to the start of the chapter.&lt;/li&gt;
+&lt;li&gt;Books normally syncs your position in a book between Apple devices. The update has broken this; opening a book on another device jumps you anywhere from pages to chapters away from where you were.&lt;/li&gt;
+&lt;li&gt;Changing fonts sometimes does not work.&lt;/li&gt;
+&lt;li&gt;An earlier version of the Books app added a “Reading goal achieved” notification that appeared if you spent five minutes reading on a given day. This used to be a standard push notification, so if your system-wide Do Not Disturb was configured to hide notifications while the phone is unlocked, the reading goal notification would respect that. In iOS 16, the notification is now an in-app notification that uses a nonstandard control, and it does not respect DnD. If you are like me and use Do Not Disturb with the intention of &lt;em&gt;not being disturbed&lt;/em&gt;, you will be disappointed. The app is so happy that you achieved your reading goal that it will interrupt your reading to tell you about it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;visual-bugs&#34;&gt;Visual Bugs&lt;/h3&gt;
+&lt;p&gt;These are more a matter of taste, but I consider them to be bugs.&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;pages left in chapter&amp;rdquo; floating label is not always centered:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-label-off-center.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The Books app used to justify text by default. This is consistent with every single printed book on my bookshelf. The update has an option for justifying text, but no longer does so by default:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://d38cb2s477t3wb.cloudfront.net/images/ios-16-books/iphone-bug-justification.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I find this especially egregious because I never noticed that the old app justified text. That was intentional: The designers replicated the experience of written books so well that I didn&amp;rsquo;t even notice. Only in the new update, in which designers couldn&amp;rsquo;t be bothered to care about such things, did I notice.&lt;/p&gt;
+&lt;h2 id=&#34;closing-thoughts&#34;&gt;Closing Thoughts&lt;/h2&gt;
+&lt;p&gt;In my frustration I considered more vitriolic titles for this post: &amp;ldquo;Apple&amp;rsquo;s Awful iOS 16 Books App&amp;rdquo; or something to that effect. Such words might even be warranted. But behind every pixel is a person, complex and feeling and working within a system bigger than themselves. However flawed this redesign is, numerous product managers, UI &amp;amp; UX designers, and engineers spent months collaborating to launch it. Should I ever have the misfortune to launch misguided work into the world — and being human, it is all but inevitable — I hope my peers are kind when they show me where I went wrong.&lt;/p&gt;
+&lt;p&gt;With that said, I wish I knew what has changed inside Apple to enable the creation of such poorly designed and built software. In my experience, every first-party iOS app has become buggier and more poorly designed year over year for the past few years, even as they&amp;rsquo;ve added useful features. This was not always the case.&lt;/p&gt;
+&lt;p&gt;Organizations produce what they&amp;rsquo;re incentivized to produce. For all its hubris, Apple used to consistently produce very high-quality, well-thought-out native software, and now they do so less often. What incentives have changed? It&amp;rsquo;s not as if this drop in quality has occurred across all parts of the company. Apple&amp;rsquo;s latest hardware is far superior to their offerings from five years ago; they&amp;rsquo;ve made strides to provide better cloud-based services (remember MobileMe?); they are a more socially responsible company, albeit with room to improve.&lt;/p&gt;
+&lt;p&gt;My motivation for writing this post (besides wanting to vent my frustration) is the hope that someone at Apple will see it and think deeply on the question of incentives. Despite the decline in software quality, I have not considered moving to another device or ecosystem; all things considered, Apple is still the best. But despite what their &amp;ldquo;Mac vs PC&amp;rdquo; ads might&amp;rsquo;ve suggested, Apple has never defined themselves solely in contrast to other companies. Instead, they confidently led the way, famously &amp;ldquo;skating to where the puck will&amp;rdquo; be rather than where it is. Apple&amp;rsquo;s product teams worked with a conviction of true experts to produce unparalleled user experiences that did more than just beat the average: They set the standard for the industry and the world.&lt;/p&gt;
+&lt;p&gt;I, and every dedicated Apple user, would celebrate a return to that level of attention and care.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Who is Draining my MacBook Battery?</title>
       <link>http://hochadel.blog/posts/apple-messages-battery/</link>
       <pubDate>Sun, 04 Dec 2022 20:58:28 -0500</pubDate>

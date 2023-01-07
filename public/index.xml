@@ -18,7 +18,8 @@
       <pubDate>Mon, 26 Dec 2022 03:49:31 -0400</pubDate>
       
       <guid>http://hochadel.blog/posts/ios-16-books/</guid>
-      <description>&lt;p&gt;Apple’s Books app has featured roughly the same reading experience since it was released in 2010. The experience changed this September with the release of iOS 16. The interface was fully redesigned, and I suspect it was also rebuilt using Swift UI.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;Note: This page clocks in at nearly 100MB, which is enormous. The size is mostly due to uncompressed screen recordings that download when the page loads rather than e.g. when the reader clicks play, and partially because of uncompressed screenshots that have not been resized for web. I plan to fix all of these things, but I haven&amp;rsquo;t had the time yet, and I didn&amp;rsquo;t want to wait to publish the post until I did. Don&amp;rsquo;t let the perfect be the enemy of the good, or something.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Apple’s Books app has featured roughly the same reading experience since it was released in 2010. The experience changed this September with the release of iOS 16. The interface was fully redesigned, and I suspect it was also rebuilt using Swift UI.&lt;/p&gt;
 &lt;p&gt;While the team surely had good intentions, the new interface is, in my opinion, bizarre. It is also ridden with so many bugs that books are frequently unreadable. I was so surprised by the collective changes that I have cataloged them here.&lt;/p&gt;
 &lt;h2 id=&#34;design&#34;&gt;Design&lt;/h2&gt;
 &lt;p&gt;Since iOS 7, Apple has designed apps to highlight content and de-emphasize UI controls. This is usually accomplished by hiding or shrinking UI elements until the user taps somewhere to reveal them. This was the case in the old Books app: only the content of the book was visible until you tapped the middle of the page, making several buttons appear.&lt;/p&gt;

@@ -3,6 +3,8 @@ title: "The iOS 16 Books App"
 date: 2022-12-26T3:49:31-04:00
 ---
 
+*Edit 2022-01-07: This page clocks in at nearly 100MB, which is enormous. The size is mostly due to uncompressed screen recordings that download when the page loads rather than when the reader clicks play, and partially because of uncompressed screenshots that have not been resized for web. I plan to fix all of these things, but I haven't had the time yet, and I didn't want to wait to publish the post until I did. Don't let the perfect be the enemy of the good, or something.*
+
 Apple’s Books app has featured roughly the same reading experience since it was released in 2010. The experience changed this September with the release of iOS 16. The interface was fully redesigned, and I suspect it was also rebuilt using Swift UI.
 
 While the team surely had good intentions, the new interface is, in my opinion, bizarre. It is also ridden with so many bugs that books are frequently unreadable. I was so surprised by the collective changes that I have cataloged them here.
